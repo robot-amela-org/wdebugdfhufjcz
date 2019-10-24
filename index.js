@@ -38,8 +38,11 @@ const httpServer = http.createServer((req, res) => {
     }
 
     const queryString = reqUrl.query ? reqUrl.query : "";
-    console.log(`This is an INFO level message. [${queryString}]`);
+    console.log(`This is an STDLOG level message. [${queryString}]`);
+    console.info(`This is an INFO level message. [${queryString}]`);
     console.error(`This is an ERROR level message. [${queryString}]`);
+    console.warn(`This is an WARN level message. [${queryString}]`);
+    console.trace(`This is an TRACE level message. [${queryString}]`);
 
     res.statusCode = 200;
 
